@@ -42,7 +42,7 @@ describe('Anime', () => {
       jest.spyOn(GeneralHelper, 'readLargeFile').mockImplementationOnce(() => {
         throw mockError;
       });
-      const response = await Request(server).get('/api/v1/anime/detail//19902');
+      const response = await Request(server).get('/api/v1/anime/detail/19902');
       expect(response.status).toBe(500);
     });
     test('should return 200', async () => {
